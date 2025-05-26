@@ -3,5 +3,5 @@ from fastapi import APIRouter
 router = APIRouter()
 
 @router.get("/")
-def read_root():
-    return {"New Start"}
+async def root_api():
+    return {"Get Start"}

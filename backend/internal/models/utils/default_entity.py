@@ -4,11 +4,11 @@ from sqlalchemy.sql import func
 import uuid
 
 class DefaultEntity:
-    id = Column(
-        UUID(as_uuid=True), 
-        primary_key=True, 
-        default=lambda: str(uuid.uuid4()), 
-        index=True)
+    id = Column(UUID(as_uuid=True),
+                primary_key=True,
+                default=uuid.uuid4,
+                index=True,
+    )
     created_by = Column(
         UUID(as_uuid=True), 
         ForeignKey("mst_users.id"), 
