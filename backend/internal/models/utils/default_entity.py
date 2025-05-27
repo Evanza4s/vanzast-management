@@ -1,8 +1,10 @@
 from sqlalchemy import Column, DateTime, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
+from sqlalchemy.orm import declarative_mixin
 import uuid
 
+@declarative_mixin
 class DefaultEntity:
     id = Column(UUID(as_uuid=True),
                 primary_key=True,

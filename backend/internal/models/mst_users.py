@@ -7,7 +7,8 @@ from jwt_refresh import JwtRefresh
 import uuid
 
 class MstUsers(Base, DefaultEntity):
-    __nametable__ = "mst_users"
+    
+    __tablename__ = "mst_users"
 
     username = Column(String, unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)

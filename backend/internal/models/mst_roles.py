@@ -5,7 +5,8 @@ from .utils.default_entity import DefaultEntity
 from internal.models.mst_users import MstUsers
 
 class MstRoles(Base, DefaultEntity):
-    __nametable__ = "mst_roles"
+    
+    __tablename__ = "mst_roles"
 
     role_name = Column(String, unique=True, nullable=False)
     is_admin = Column(Boolean, nullable=False)

@@ -7,7 +7,8 @@ from internal.models.mst_users import MstUsers
 import uuid
 
 class MstUserInfos(Base, DefaultEntity):
-    __nametable__ = "mst_userinfos"
+    
+    __tablename__ = "mst_userinfos"
 
     username = Column(String, unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)
